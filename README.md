@@ -20,11 +20,11 @@ The qualities listed in order: combined fuel efficiency in miles per gallon, num
 
 The data as recieved required some correction and paring down. Some horsepower data was missing and was corrected via google search. The list of cars contained 7 diesel cars which were thrown out in order not to throw off a fuel efficiency prediction as diesel engines are naturally more fuel efficient than gas engines. I would have liked to make diesel another attribute to predict fuel efficiency from, however the small sample size makes this futile. 
 
-![](assets/IMG/datapenguin.png){: width="500" }
-
 ## Ridge Regression
 
-For ridge regression we use every quantity (discarding model name and origin) provided to predict fuel efficiency. First we sample 100 random cars without replacement to be our test cars, the remainder are put into the training pool. The benifit of this randomness is the ability to continually resample and make sure the level of error in our predictions isnt a fluke of the specific cars sampled. This also has a knock on effect of giving us a more accurate idea of the appropriate weights for our quantities. If I had more time this would be systematized to give average error and weights. Once we have our traing and test data we scale and run ridge regression.      
+For ridge regression we use every quantity (discarding model name and origin) provided to predict fuel efficiency. First we sample 100 random cars without replacement to be our test cars, the remainder are put into the training pool. The benifit of this randomness is the ability to continually resample and make sure the level of error in our predictions isnt a fluke of the specific cars sampled. This also has a knock on effect of giving us a more accurate idea of the appropriate weights for our quantities. If I had more time this would be systematized to give average error and weights. Once we have our traing and test data we scale and run ridge regression.
+
+![](assets/IMG/Capture.png){: width="300" }
 
 ```python
 test_data = mpg_data.sample(n = 100, replace = False, axis = 0) #random sample of the cars
