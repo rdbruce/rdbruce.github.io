@@ -1,14 +1,14 @@
 ## The Cars of the World 1970 - 1982
 
-This is an analysis of cars of various national origins. First, we will use linear regression to try and predict fuel efficiency of cars from their various qualities like weight and power. Then, we will use kmeans clustering to create car stereoypes and relate that to national origin.
+This is an analysis of cars of various national origins. This analysis will focus on identifying factors influencing fuel efficiency and stereoyping cars. 
 
 ***
 
 ## Introduction 
 
-This dataset embodies a critical point in automotive history where due to the 1973 Oil Crisis and strengthening air quality controls american car makers were forced to downsize and promote efficiency. Exploring this period might offer relevant information to the current task of emissions reduction. 
+This dataset embodies a critical point in automotive history where due to the 1973 Oil Crisis and strengthening air quality controls american car makers were forced to downsize and promote efficiency. Exploring this period might offer relevant information to the current task of emissions reduction. We might also learn about the historical transformation these cars underwent.  
 
-There is some dataset that we can use to help solve this problem. This allows a machine learning approach. This is how I will solve the problem using supervised/unsupervised/reinforcement/etc. machine learning.
+The techinques of analysis used are linear regression and k means clustering. First, we will use linear regression to try and predict fuel efficiency of cars from the qualities described by the data set. Then, we will use kmeans clustering to create car stereoypes and examine what composes them.
 
 We did this to solve the problem. We concluded that...
 
