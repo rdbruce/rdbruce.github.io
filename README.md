@@ -4,6 +4,8 @@ This is an analysis of internal combustion automobiles of various national origi
 
 ![](assets/IMG/s-l1600.jpg)
 
+[Weren't the 80s just beautiful?]
+
 ***
 
 ## Introduction 
