@@ -1,6 +1,6 @@
 ## The Cars of the World 1970 - 1982
 
-This is an analysis of cars of various national origins. This analysis will focus on identifying factors influencing fuel efficiency and stereoyping cars. 
+This is an analysis of internal combustion automobiles of various national origins. This analysis will focus on identifying factors influencing fuel efficiency and stereoyping cars. 
 
 ***
 
@@ -14,7 +14,11 @@ We did this to solve the problem. We concluded that...
 
 ## Data
 
-The data used comes from the UCI machine learning repository. It is a space seperated data file containing a list of qualities of 398 cars from the United States, Europe, and Japan. The qualities listed in order: combined fuel efficiency in miles per gallon, number of cylinders, displacement in cubic inches, horse power, weight in pounds, acceleration, model year, place or origin, and model name.    
+The data used comes from the UCI machine learning repository linked here: https://archive.ics.uci.edu/dataset/9/auto+mpg
+It is a space seperated data file containing a list of qualities of 398 cars from the United States, Europe, and Japan. 
+The qualities listed in order: combined fuel efficiency in miles per gallon, number of cylinders, displacement in cubic inches, horse power, weight in pounds, an acceleration value, model year, place or origin, and model name. 
+
+The data as recieved required some correction and paring down. Some horsepower data was missing and was corrected via google search. The list of cars contained 7 diesel cars which were thrown out in order not to throw off a fuel efficiency prediction as diesel engines are naturally more fuel efficient than gas engines. I would have liked to make diesel another attribute to predict fuel efficiency from, however the small sample size makes this futile. 
 
 ![](assets/IMG/datapenguin.png){: width="500" }
 
