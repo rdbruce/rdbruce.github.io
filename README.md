@@ -1,6 +1,6 @@
-## The Cars of the World 1970 - 1982
+## The Cars of the World (Wait maybe not!) 1970 - 1982
 
-This is an analysis of internal combustion automobiles of various national origins. This analysis will focus on identifying factors influencing fuel efficiency and stereotyping cars. 
+This is an analysis of internal combustion automobiles of various national origins. We will explore the qualities that make or break fuel efficiency and then we will examine how those qualities form car stereoypes. 
 
 ***
 
