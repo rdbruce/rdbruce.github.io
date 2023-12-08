@@ -22,32 +22,25 @@ The data as recieved required some correction and paring down. Some horsepower d
 
 ![](assets/IMG/datapenguin.png){: width="500" }
 
-*Figure 1: Here is a caption for my diagram. This one shows a pengiun [1].*
+## Ridge Regression
 
-## Modelling
-
-Here are some more details about the machine learning approach, and why this was deemed appropriate for the dataset. 
-
-The model might involve optimizing some quantity. You can include snippets of code if it is helpful to explain things.
+For ridge regression we use every quantity (discarding model name and origin) provided to predict fuel efficiency. First we sample 100 random cars without replacement to be our test cars, the remainder are put into the training pool. The benifit of this randomness is the ability to continually resample and make sure the level of error in our predictions isnt a fluke of the specific cars sampled. This also has a knock on effect of giving us a more accurate idea of the appropriate weights for our quantities. If I had more time this would be systematized to give average error and weights. Once we have our traing and test data we scale and run ridge regression.      
 
 ```python
-from sklearn.ensemble import ExtraTreesClassifier
-from sklearn.datasets import make_classification
-X, y = make_classification(n_features=4, random_state=0)
-clf = ExtraTreesClassifier(n_estimators=100, random_state=0)
-clf.fit(X, y)
-clf.predict([[0, 0, 0, 0]])
+test_data = mpg_data.sample(n = 100, replace = False, axis = 0) #random sample of the cars
+train_data = mpg_data.drop(test_data.index, axis = 0) #remaining cars not sampled
+
+X_train = train_data.drop(["MPG", "Model", "Country Of Origin"], axis = 1)
+Y_train = train_data.loc[:,"MPG"]
+
+X_test = test_data.drop(["MPG", "Model", "Country Of Origin"], axis = 1)
 ```
 
 This is how the method was developed.
 
-## Results
+## K Means Clustering
 
 Figure X shows... [description of Figure X].
-
-## Discussion
-
-From Figure X, one can see that... [interpretation of Figure X].
 
 ## Conclusion
 
