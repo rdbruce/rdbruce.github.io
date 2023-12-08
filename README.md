@@ -43,6 +43,8 @@ Our RMSE hovers about 3 never more than 1 away. As seen from the figure there se
 
 ![](assets/IMG/Capture6.PNG)
 
+[This is another sample of training data with only american cars.]
+
 After eliminating all foreign cars from the data set the RMSE becomes much more stable at around 2.3. The weights become more even and consistent. The foreign cars clearly threw off the ridge regression predictions, however it is not clear to me why this is the case. The issue could lie with small foreign sample size, some sort of data issue like use of imperial rather than U.S gallons, or superior fuel efficiency in small foreign engines making the connection between displacement and efficiency less obvious.  
 
 ## K Means Clustering
