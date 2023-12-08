@@ -49,19 +49,21 @@ After eliminating all foreign cars from the data set the RMSE becomes much more 
 
 We cluster using every quantity we have save model year. The data is scaled appropriately before clustered, otherwise the data would cluster solely around weight due to its larger magnitude.
 
+![](assets/IMG/Capture7.PNG)
+
+[The two arrays at the top are the center points of group zero and one. The meaning of each number matches the columns of the table below.]
+
 ![](assets/IMG/Capture5.bmp)
 
 [These are pie charts representing the group distribution of each origin group.]
 
-We can see that group one is entirely endemic to the United States, while group zero cars can come from every region. We will call group one "land yachts" and group zero "econoboxes". We choose to use 2 clusters because the addition of more clusters doesnt add new information, the division between the american land yacht and all other cars does not become more visible.
-
-![](assets/IMG/Capture7.PNG)
+Group zero is made up of fuel efficient small displacement slow cars, while group one are big fast gas guzzlers. We can see that group one is entirely endemic to the United States, while group zero cars can come from every region. We will call group one "land yachts" and group zero "econoboxes". I chose to use 2 clusters because the addition of more clusters does not add new information, the division between the american land yacht and all other cars does not become more visible.
 
 ![](assets/IMG/Capture4.png)
 
 [These are scatter plots with inputs: weight, year, and displacement and output miles per gallon. Cluster zero points are blue and cluster one points are orange.]
 
-We can see from these graphs the negative correlations of weight and displacement with respect to miles per gallon  
+We can see from the first and second graph the negative correlation of weight with respect to miles per gallon and the positive correlation of year with miles per gallon. These correlations confirm the weights found by our ridge regression. Graph three shows the negative correlation between displacement and miles per gallon confirming the negative weight provided by the american only regression.  
 
 ## Conclusion
 
