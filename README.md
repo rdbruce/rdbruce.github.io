@@ -68,9 +68,9 @@ We can see that group zero is entirely endemic to the United States, while group
 
 ## Conclusion
 
+#1 Hello this is bobby
 
-
-Here is how this work could be developed further in a future project.
+This data set was very dirty. Missing power figures, inaccurate efficiency numbers, and unlabeled alternate engine types have all and slowed my work
 
 ## References
 [1] https://www.energy.gov/eere/vehicles/fact-915-march-7-2016-average-historical-annual-gasoline-pump-price-1929-2015
