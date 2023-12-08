@@ -16,7 +16,7 @@ We did this to solve the problem. We concluded that...
 
 The data used comes from the UCI machine learning repository linked here: https://archive.ics.uci.edu/dataset/9/auto+mpg
 It is a space seperated data file containing a list of qualities of 398 cars from the United States, Europe, and Japan. 
-The qualities listed in order: combined fuel efficiency in miles per gallon, number of cylinders, displacement in cubic inches, horse power, weight in pounds, an acceleration value, model year, place or origin, and model name. 
+The qualities listed in order: combined fuel efficiency in miles per gallon, number of cylinders, displacement in cubic inches, horse power, weight in pounds, zero to sixy in seconds, model year, place or origin, and model name. 
 
 The data as recieved required some correction and paring down. Some horsepower data was missing and was corrected via google search. The list of cars contained 7 diesel cars which were thrown out in order not to throw off a fuel efficiency prediction as diesel engines are naturally more fuel efficient than gas engines. I would have liked to make diesel another attribute to predict fuel efficiency from, however the small sample size makes this futile. 
 
@@ -26,23 +26,20 @@ For ridge regression we use every quantity (discarding model name and origin) pr
 
 ![](assets/IMG/Capture.PNG)
 
-Figure X shows... [This is a typical sample of training data, scaled element weights, and root mean squared error.].
+[This is a typical sample of training data, scaled element weights, and root mean squared error.]
 
 The element weights are in order with the elements of the training data. While all the elements have some substantial weight this is misleading, over repeated sampling the only elements that have a consistent signifigant weight are weight and model year. Weight always signifigantly negative weight and year always has a signifigantly positive weight. This makes sense, increased weight means an increased inertia that must be overcome with a loss of fuel efficiency. On the other hand, as the 70s progressed the oil crisis and clean air regulations drove the efficiency of new cars up year after year. We will further confirm these relationships in the K means section.
 
 ![](assets/IMG/Capture2.PNG)
 
-```python
-test_data = mpg_data.sample(n = 100, replace = False, axis = 0) #random sample of the cars
-train_data = mpg_data.drop(test_data.index, axis = 0) #remaining cars not sampled
+[This is a table of our regression results and errors. Underneath is a distribution of error sorted lowest to highest.]
 
-X_train = train_data.drop(["MPG", "Model", "Country Of Origin"], axis = 1)
-Y_train = train_data.loc[:,"MPG"]
+![](assets/IMG/Capture3.PNG)
 
-X_test = test_data.drop(["MPG", "Model", "Country Of Origin"], axis = 1)
-```
+[VW pickup and Dodge Rampage compared
+MPG, # Cylinders, Displacement, Horse Power, LBS, 0-60, Year, Origin, Model Name]
 
-This is how the method was developed.
+Our RMSE hovers about 3 never more than 1 away. As seen from the figure there seems to be a couple of hard to explain spoilers in this test set like the 82 VW pickup. When compared with the 82 Dodge Rampage (a similar small pickup) we can see 82 VW pickup is very similar in weight and has the same year leading to a similar predicted efficiency. The increased actual efficiency of the VW must come from the much smaller more efficient engine. I dont know why the model doesnt weigh smaller engines as more fuel efficient dispite the obvious correlation to be shown in the K means section.
 
 ## K Means Clustering
 
