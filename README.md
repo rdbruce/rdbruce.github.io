@@ -50,7 +50,7 @@ Group zero is made up of big fast gas guzzlers, while group one are fuel efficie
 
 [Six scatter plots with a car element input and efficiency output. Cluster zero points are orange. Cluster one points are blue.]
 
-These graphs suggest the best way to categorize the clusters is through cylinder count, displacement, and power. These categories give the clusters the least overlap. Acceleration is the most muddy element with plenty of cluster overlap, this suggests the big gas guzzlers don't actually go much faster than smaller cars.
+These graphs suggest the best way to categorize the clusters is through cylinder count, displacement, and power. These categories give the clusters the least overlap. Acceleration is the most muddy element with plenty of cluster overlap, this suggests the big gas guzzlers are not synonymous with speed and there are diminishing returns for burning more fuel.
 
 We can clearly see the negative correlations with efficiency in the first 4 graphs. We can also see a clear positive correlation between year and efficiency. This again poses the question of conspicuous weight placed upon weight and year, when so many other elements resemble weight.  
 
