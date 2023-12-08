@@ -22,32 +22,21 @@ The data as received required some correction and paring down. Some horsepower d
 
 ## Ridge Regression
 
-For ridge regression we use every quantity (discarding model name and origin) provided to predict fuel efficiency. First we sample 100 random cars without replacement to be our test cars, the remainder are put into the training pool. The benefit of this randomness is the ability to continually resample and make sure the level of error in our predictions isn't a fluke of the specific cars sampled. This also has a knock on effect of giving us a more accurate idea of the appropriate weights for our quantities. If I had more time this would be systematized to give average error and weights or I would have found a way to expand the dataset making this irrelevant. Once we have our training and test data we scale the data and run ridge regression.
+For ridge regression we use every quantity (discarding model name and origin) provided to predict fuel efficiency. First we sample 50 random cars without replacement to be our test cars, the remainder are put into the training pool. The benefit of this randomness is the ability to continually resample and make sure the level of error in our predictions isn't a fluke of the specific cars sampled. This also has a knock on effect of giving us a more accurate idea of the appropriate weights for our quantities. If I had more time this would be systematized to give average error and weights or I would have found a way to expand the dataset making this irrelevant. Once we have our training and test data we scale the data and run ridge regression.
 
-![](assets/IMG/Capture.PNG)
+![](assets/IMG/Capture1.PNG)
 
-[This is a typical sample of training data, scaled element weights, and root mean squared error.]
+[On the left is a sample of training data, scaled element weights, and root mean squared error.
+On the right is a distribution of error across models tested sorted least error to most error.
+The element weights are in order with the elements of the training data.]
 
-The element weights are in order with the elements of the training data. While all the elements have some substantial weight this is misleading, over repeated sampling the only elements that have a consistent significant weight are weight and model year. Weight always has a significantly negative weight and year always has a significantly positive weight. This makes sense, increased weight means an increased inertia that must be overcome with a loss of fuel efficiency. On the other hand, as the 70s progressed the oil crisis and clean air regulations drove the efficiency of new cars up year after year. We will further confirm these relationships in the K means section.
+We can see that our model is concentraiting everything into the weight and model year elements. This makes some sense, increased weight means an increased inertia that must be overcome with a loss of fuel efficiency. On the other hand, as the 70s progressed the oil crisis and clean air regulations drove the efficiency of new cars up year after year. We will further confirm these relationships in the K means section. What doesnt make any sense is the lack of weight in any of the elements associated with the engine. Why dont cylinder count, displacement, or power seem to describe efficiency? Why do non american cars always top the error distribution? Lets now examine only american cars. 
 
 ![](assets/IMG/Capture2.PNG)
 
-[This is a table of our regression results and errors. Underneath is a distribution of error sorted lowest to highest.]
-
-![](assets/IMG/Capture3.PNG)
-
-[VW pickup and Dodge Rampage compared
-MPG, # Cylinders, Displacement, Horse Power, LBS, 0-60, Year, Origin, Model Name]
-
-Our RMSE hovers about 3 never more than 1 away. As seen from the figure there seems to be a couple of hard to explain spoilers in this test set like the 82 VW pickup. When compared with the 82 Dodge Rampage (a similar small pickup) we can see the 82 VW pickup is very similar in weight and has the same year leading to a similar predicted efficiency. The increased actual efficiency of the VW must come from the much smaller more efficient engine. I don't know why the model does not weigh smaller engines as more fuel efficient despite the obvious correlation to be shown in the K means section.
-
-![](assets/IMG/Capture6.PNG)
-
 [This is another sample of training data with only american cars.]
 
-After eliminating all foreign cars from the data set the RMSE becomes much more stable at around 2. We can also see that the weight is less concentraited into just the weight and model year elements, cylinder number, displacement, and acceleration become more relevant. The only weight which still shifts about zero is power. 
-
-The foreign cars clearly threw off the ridge regression predictions, however it is not clear to me why this is the case. The issue could lie with small foreign sample size, some sort of data issue like use of imperial rather than U.S gallons, or superior fuel efficiency in small foreign engines making the connection between displacement and efficiency less obvious.  
+After eliminating all foreign cars from the data set the RMSE descends from near 3 to near 2. We can also see that the weight is less concentraited into just the weight and model year. The elements, cylinder number, displacement, and acceleration have become more relevant. The only element still without weight is power. The foreign cars clearly threw off the ridge regression predictions, however it is not clear to me why this is the case. The issue could lie with small foreign sample size, some sort of data issue like use of imperial rather than U.S gallons, or superior fuel efficiency in small foreign engines making the connection between displacement and efficiency less obvious.  
 
 ## K Means Clustering
 
