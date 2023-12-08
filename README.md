@@ -40,22 +40,31 @@ After eliminating all foreign cars from the data set the RMSE descends from near
 
 ## K Means Clustering
 
-We cluster using every quantity we have save model year. The data is scaled appropriately before clustered, otherwise the data would cluster solely around weight due to its larger magnitude.
+We cluster using cars from every nation and using every quantity we have save model year. The data is scaled appropriately before clustered, otherwise the data would cluster solely around weight due to its larger magnitude.
 
-Group zero is made up of fuel efficient small displacement slow cars, while group one are big fast gas guzzlers. We can see that group one is entirely endemic to the United States, while group zero cars can come from every region. We will call group one "land yachts" and group zero "econoboxes". I chose to use 2 clusters because the addition of more clusters does not add new information, the division between the american land yacht and all other cars does not become more visible.
+![](assets/IMG/Capture5.PNG)
+
+[Arrays containing the centers of clusters zero and one. Table of cars with cluster assignment. The numbers in the array are ordered like the elements of the table.]
+
+Group zero is made up of big fast gas guzzlers, while group one are fuel efficient small displacement slow cars. We will call group zero "land yachts" and group one "econoboxes". 
 
 ![](assets/IMG/Capture3.PNG)
 
 [Six scatter plots with a car element input and efficiency output. Cluster zero points are orange. Cluster one points are blue.]
 
+These graphs suggest the best way to categorize the clusters is through cylinder count, displacement, and power. These categories give the clusters the least overlap. Acceleration is the most muddy element with pleanty of cluster overlap, this suggests the big gas guzzlers dont actually go much faster than smaller cars.
+
+We can clearly see the negative correlations with efficiency in the first 4 graphs. We can also see a clear positive correlation between year and efficiency. This poses a possible reason for the conspicuous weight placed upon weight and year, weight and year span the vector space with the most efficiency.  
+
+![](assets/IMG/Capture6.png)
+
+In the last graph of the previous figure we can see the death of our land yacht group in 1980. This coincides with a massive spike in historical gas prices in 1980. The car industry must have responded to the rising price of gas by more fully turning to frugality. [1]
+
 ![](assets/IMG/Capture4.PNG)
 
 [These are pie charts representing the group distribution of each country of origin.]
 
-
-We can see from the first and second graph the negative correlation of weight with respect to miles per gallon and the positive correlation of year with miles per gallon. These correlations confirm the weights found by our ridge regression. Graph three shows the negative correlation between displacement and miles per gallon confirming the negative weight provided by the american only regression.
-
-In graph two we can see the death of our Land Yacht group in 1980. This coincides with a massive spike in historical gas prices in 1980. https://www.energy.gov/eere/vehicles/fact-915-march-7-2016-average-historical-annual-gasoline-pump-price-1929-2015  
+We can see that group zero is entirely endemic to the United States, while group one cars can come from every region. The highway infrastructure and dispersed population of the United States ought to encourage big cars, especially when compared with more urbanized Europe and Japan. I chose to use 2 clusters because the addition of more clusters does not add new information, the division between the american land yachts and all other cars does not become more visible.  
 
 ## Conclusion
 
@@ -64,6 +73,6 @@ In graph two we can see the death of our Land Yacht group in 1980. This coincide
 Here is how this work could be developed further in a future project.
 
 ## References
-[1] DALL-E 3
+[1] https://www.energy.gov/eere/vehicles/fact-915-march-7-2016-average-historical-annual-gasoline-pump-price-1929-2015
 
 [back](./)
