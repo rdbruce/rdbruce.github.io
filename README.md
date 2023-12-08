@@ -43,7 +43,7 @@ Our RMSE hovers about 3 never more than 1 away. As seen from the figure there se
 
 ![](assets/IMG/Capture6.PNG)
 
-After eliminating all foreign cars from the data set the RMSE becomes much more stable at around 2.3. The weights also spread out more to more spread out and consistent. My hunch that foreign cars threw off the ridge regression is vindicated, however I still do not understand why this is the case. 
+After eliminating all foreign cars from the data set the RMSE becomes much more stable at around 2.3. The weights become more even and consistent. The foreign cars clearly threw off the ridge regression predictions, however it is not clear to me why this is the case. The issue could lie with small foreign sample size, some sort of data issue like use of imperial rather than U.S gallons, or superior fuel efficiency in small foreign engines making the connection between displacement and efficiency less obvious.  
 
 ## K Means Clustering
 
@@ -63,7 +63,9 @@ Group zero is made up of fuel efficient small displacement slow cars, while grou
 
 [These are scatter plots with inputs: weight, year, and displacement and output miles per gallon. Cluster zero points are blue and cluster one points are orange.]
 
-We can see from the first and second graph the negative correlation of weight with respect to miles per gallon and the positive correlation of year with miles per gallon. These correlations confirm the weights found by our ridge regression. Graph three shows the negative correlation between displacement and miles per gallon confirming the negative weight provided by the american only regression.  
+We can see from the first and second graph the negative correlation of weight with respect to miles per gallon and the positive correlation of year with miles per gallon. These correlations confirm the weights found by our ridge regression. Graph three shows the negative correlation between displacement and miles per gallon confirming the negative weight provided by the american only regression.
+
+In graph two we can see the death of our Land Yacht group in 1980. This coincides with a massive spike in historical gas prices in 1980. https://www.energy.gov/eere/vehicles/fact-915-march-7-2016-average-historical-annual-gasoline-pump-price-1929-2015  
 
 ## Conclusion
 
