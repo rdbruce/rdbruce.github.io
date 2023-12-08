@@ -18,7 +18,7 @@ The data used comes from the UCI machine learning repository linked here: https:
 It is a space separated data file containing a list of qualities of 398 cars from the United States, Europe, and Japan. 
 The qualities listed in order: combined fuel efficiency in miles per gallon, number of cylinders, displacement in cubic inches, horse power, weight in pounds, zero to sixty in seconds, model year, place or origin, and model name. 
 
-The data as received required some correction and paring down. Some horsepower data was missing and was corrected via google search. The data set contained 7 diesel and 3 rotary engine cars which were thrown out in order not to throw off a fuel efficiency prediction, diesel engines are naturally more fuel efficient than gas engines, while rotary engines are highly inefficient for their small displacement. I would have liked to make diesel another attribute to predict fuel efficiency from, however the small sample size makes this futile.
+The data as received required some correction and paring down. Some horsepower data was missing and was corrected via google search. The data set contained 9 diesel and 3 rotary engine cars which were thrown out in order not to throw off a fuel efficiency prediction, diesel engines are naturally more fuel efficient than gas engines, while rotary engines are highly inefficient for their small displacement. I would have liked to make diesel another attribute to predict fuel efficiency from, however the small sample size makes this futile.
 
 ## Ridge Regression
 
@@ -41,9 +41,17 @@ MPG, # Cylinders, Displacement, Horse Power, LBS, 0-60, Year, Origin, Model Name
 
 Our RMSE hovers about 3 never more than 1 away. As seen from the figure there seems to be a couple of hard to explain spoilers in this test set like the 82 VW pickup. When compared with the 82 Dodge Rampage (a similar small pickup) we can see the 82 VW pickup is very similar in weight and has the same year leading to a similar predicted efficiency. The increased actual efficiency of the VW must come from the much smaller more efficient engine. I don't know why the model does not weigh smaller engines as more fuel efficient despite the obvious correlation to be shown in the K means section.
 
+![](assets/IMG/Capture6.PNG)
+
+After eliminating all foreign cars from the data set the RMSE becomes much more stable at around 2.3. The weights also spread out more to more spread out and consistent. My hunch that foreign cars threw off the ridge regression is vindicated, however I still do not understand why this is the case. 
+
 ## K Means Clustering
 
-Figure X shows... [description of Figure X].
+![](assets/IMG/Capture4.png)
+
+[This is a typical sample of training data, scaled element weights, and root mean squared error.]
+
+![](assets/IMG/Capture5.bmp)
 
 ## Conclusion
 
