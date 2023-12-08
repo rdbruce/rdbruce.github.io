@@ -47,11 +47,21 @@ After eliminating all foreign cars from the data set the RMSE becomes much more 
 
 ## K Means Clustering
 
-![](assets/IMG/Capture4.png)
-
-[This is a typical sample of training data, scaled element weights, and root mean squared error.]
+We cluster using every quantity we have save model year. The data is scaled appropriately before clustered, otherwise the data would cluster solely around weight due to its larger magnitude.
 
 ![](assets/IMG/Capture5.bmp)
+
+[These are pie charts representing the group distribution of each origin group.]
+
+We can see that group one is entirely endemic to the United States, while group zero cars can come from every region. We will call group one "land yachts" and group zero "econoboxes". We choose to use 2 clusters because the addition of more clusters doesnt add new information, the division between the american land yacht and all other cars does not become more visible.
+
+![](assets/IMG/Capture7.PNG)
+
+![](assets/IMG/Capture4.png)
+
+[These are scatter plots with inputs: weight, year, and displacement and output miles per gallon. Cluster zero points are blue and cluster one points are orange.]
+
+We can see from these graphs the negative correlations of weight and displacement with respect to miles per gallon  
 
 ## Conclusion
 
