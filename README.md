@@ -12,7 +12,7 @@ The machine learning techniques used are linear regression and K means clusterin
 
 ## Data
 
-The data used comes from the UCI machine learning repository linked here: https://archive.ics.uci.edu/dataset/9/auto+mpg
+The data used comes from the UCI machine learning repository. [1]
 It is a space separated data file containing a list of qualities of 398 cars from the United States, Europe, and Japan. 
 The qualities listed in order: combined fuel efficiency in miles per gallon, number of cylinders, displacement in cubic inches, horse power, weight in pounds, zero to sixty in seconds, model year, place or origin, and model name. 
 
@@ -56,7 +56,7 @@ We can clearly see the negative correlations with efficiency in the first 4 grap
 
 ![](assets/IMG/Capture6.png)
 
-In the last graph of the previous figure we can see the death of our land yacht group in 1980. This coincides with a massive spike in historical gas prices in 1980. The car industry must have responded to the rising price of gas by more fully turning to frugality. [1]
+In the last graph of the previous figure we can see the death of our land yacht group in 1980. This coincides with a massive spike in historical gas prices in 1980. The car industry must have responded to the rising price of gas by more fully turning to frugality. [2]
 
 ![](assets/IMG/Capture4.PNG)
 
@@ -81,6 +81,7 @@ In an attempt to get to the bottom of the weight discrepancy I plotted the clust
 This data set was small and dirty. Missing power figures, inaccurate efficiency numbers, and unlabeled alternate engine types have all and slowed my work. I would like to improve upon the dataset by adding more to both the size and element count. More cars would further stabilize our weights and reduce error. Elements like drag coefficient, fuel delivery, and highest gear ratio would go a long way to reducing error. I would also like to add more diesel cars to the data set such that diesel as a regression element wouldnt only introduce error. 
 
 ## References
-[1] https://www.energy.gov/eere/vehicles/fact-915-march-7-2016-average-historical-annual-gasoline-pump-price-1929-2015
+[1]https://archive.ics.uci.edu/dataset/9/auto+mpg
+[2] https://www.energy.gov/eere/vehicles/fact-915-march-7-2016-average-historical-annual-gasoline-pump-price-1929-2015
 
 [back](./)
