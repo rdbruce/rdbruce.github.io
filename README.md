@@ -54,7 +54,7 @@ Group zero is made up of big fast gas guzzlers, while group one are fuel efficie
 
 These graphs suggest the best way to categorize the clusters is through cylinder count, displacement, and power. These categories give the clusters the least overlap. Acceleration is the most muddy element with pleanty of cluster overlap, this suggests the big gas guzzlers dont actually go much faster than smaller cars.
 
-We can clearly see the negative correlations with efficiency in the first 4 graphs. We can also see a clear positive correlation between year and efficiency. This poses a possible reason for the conspicuous weight placed upon weight and year, weight and year span the vector space with the most efficiency.  
+We can clearly see the negative correlations with efficiency in the first 4 graphs. We can also see a clear positive correlation between year and efficiency. This again poses the question of conspicuous weight placed upon weight and year, when so many other elements resemble weight.  
 
 ![](assets/IMG/Capture6.png)
 
@@ -64,13 +64,23 @@ In the last graph of the previous figure we can see the death of our land yacht 
 
 [These are pie charts representing the group distribution of each country of origin.]
 
-We can see that group zero is entirely endemic to the United States, while group one cars can come from every region. The highway infrastructure and dispersed population of the United States ought to encourage big cars, especially when compared with more urbanized Europe and Japan. I chose to use 2 clusters because the addition of more clusters does not add new information, the division between the american land yachts and all other cars does not become more visible.  
+We can see that group zero is entirely endemic to the United States, while group one cars can come from every region. The highway infrastructure and dispersed population of the United States ought to encourage big cars, especially when compared with more urbanized Europe and Japan. I chose to use 2 clusters because the addition of more clusters does not add new information, the division between the american land yachts and all other cars does not become more visible.
+
+![](assets/IMG/Capture7.PNG)
+
+[Six new scatter plots without foreign data.]
+
+In an attempt to get to the bottom of the weight discrepancy I plotted the cluster plots without foreign cars. The main difference between these plots and the world wide plots is the reduction in efficiency outliers. I think that these outliers were made more conspicuous by the scaling this would explain the higher error of the world wide regression. These outliers must also have the effect of the concentraited weights.  
 
 ## Conclusion
 
-#1 Hello this is bobby
+#1 Combining american and foreign cars in ridge regression is inappropriate with this data set and leads to significantly higher error and counterintuitive element weights.
 
-This data set was very dirty. Missing power figures, inaccurate efficiency numbers, and unlabeled alternate engine types have all and slowed my work
+#2 The era of high displacement high power v-8s came to at least a temporary end in 1980.
+
+#3 High displacement high power v-8s were uniquely american engines.
+
+This data set was small and dirty. Missing power figures, inaccurate efficiency numbers, and unlabeled alternate engine types have all and slowed my work. I would like to improve upon the dataset by adding more to both the size and element count. More cars would further stabilize our weights and reduce error. Elements like drag coefficient, fuel delivery, and highest gear ratio would go a long way to reducing error. I would also like to add more diesel cars to the data set such that diesel as a regression element wouldnt only introduce error. 
 
 ## References
 [1] https://www.energy.gov/eere/vehicles/fact-915-march-7-2016-average-historical-annual-gasoline-pump-price-1929-2015
