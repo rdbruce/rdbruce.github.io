@@ -18,11 +18,11 @@ The data used comes from the UCI machine learning repository linked here: https:
 It is a space separated data file containing a list of qualities of 398 cars from the United States, Europe, and Japan. 
 The qualities listed in order: combined fuel efficiency in miles per gallon, number of cylinders, displacement in cubic inches, horse power, weight in pounds, zero to sixty in seconds, model year, place or origin, and model name. 
 
-The data as received required some correction and paring down. Some horsepower data was missing and was corrected via google search. The data set contained 9 diesel and 3 rotary engine cars which were thrown out in order not to throw off a fuel efficiency prediction, diesel engines are naturally more fuel efficient than gas engines, while rotary engines are highly inefficient for their small displacement. I would have liked to make diesel another attribute to predict fuel efficiency from, however the small sample size makes this futile.
+The data as received required some correction and paring down. Some horsepower data was missing and was corrected via google search. The data set contained 9 diesel and 3 rotary engine cars which were thrown out in order not to throw off a fuel efficiency prediction, diesel engines are naturally more fuel efficient than gas engines, while rotary engines are highly inefficient for their small displacement. I would have liked to make diesel another attribute to predict fuel efficiency from however, the small sample size makes this futile.
 
 ## Ridge Regression
 
-For ridge regression we use every quantity (discarding model name and origin) provided to predict fuel efficiency. First we sample 100 random cars without replacement to be our test cars, the remainder are put into the training pool. The benefit of this randomness is the ability to continually resample and make sure the level of error in our predictions isn't a fluke of the specific cars sampled. This also has a knock on effect of giving us a more accurate idea of the appropriate weights for our quantities. If I had more time this would be systematized to give average error and weights. Once we have our training and test data we scale the data and run ridge regression.
+For ridge regression we use every quantity (discarding model name and origin) provided to predict fuel efficiency. First we sample 100 random cars without replacement to be our test cars, the remainder are put into the training pool. The benefit of this randomness is the ability to continually resample and make sure the level of error in our predictions isn't a fluke of the specific cars sampled. This also has a knock on effect of giving us a more accurate idea of the appropriate weights for our quantities. If I had more time this would be systematized to give average error and weights or I would have found a way to expand the dataset making this irrelevant. Once we have our training and test data we scale the data and run ridge regression.
 
 ![](assets/IMG/Capture.PNG)
 
@@ -45,7 +45,9 @@ Our RMSE hovers about 3 never more than 1 away. As seen from the figure there se
 
 [This is another sample of training data with only american cars.]
 
-After eliminating all foreign cars from the data set the RMSE becomes much more stable at around 2.3. The weights become more even and consistent. The foreign cars clearly threw off the ridge regression predictions, however it is not clear to me why this is the case. The issue could lie with small foreign sample size, some sort of data issue like use of imperial rather than U.S gallons, or superior fuel efficiency in small foreign engines making the connection between displacement and efficiency less obvious.  
+After eliminating all foreign cars from the data set the RMSE becomes much more stable at around 2. We can also see that the weight is less concentraited into just the weight and model year elements, cylinder number, displacement, and acceleration become more relevant. The only weight which still shifts about zero is power. 
+
+The foreign cars clearly threw off the ridge regression predictions, however it is not clear to me why this is the case. The issue could lie with small foreign sample size, some sort of data issue like use of imperial rather than U.S gallons, or superior fuel efficiency in small foreign engines making the connection between displacement and efficiency less obvious.  
 
 ## K Means Clustering
 
@@ -71,9 +73,7 @@ In graph two we can see the death of our Land Yacht group in 1980. This coincide
 
 ## Conclusion
 
-Here is a brief summary. From this work, the following conclusions can be made:
-* first conclusion
-* second conclusion
+
 
 Here is how this work could be developed further in a future project.
 
