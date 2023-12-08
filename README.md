@@ -1,6 +1,6 @@
-## My Project
+## The Cars of the World 1970 - 1982
 
-I applied machine learning techniques to investigate... Below is my report.
+This is an analysis of cars of various national origins. First, we will use linear regression to try and predict fuel efficiency of cars from their various qualities like weight and power. Then, we will use kmeans clustering to creat car stereoypes and relate that to national origin.
 
 ***
 
