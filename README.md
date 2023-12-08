@@ -18,7 +18,7 @@ The data used comes from the UCI machine learning repository linked here: https:
 It is a space separated data file containing a list of qualities of 398 cars from the United States, Europe, and Japan. 
 The qualities listed in order: combined fuel efficiency in miles per gallon, number of cylinders, displacement in cubic inches, horse power, weight in pounds, zero to sixty in seconds, model year, place or origin, and model name. 
 
-The data as received required some correction and paring down. Some horsepower data was missing and was corrected via google search. The list of cars contained 7 diesel cars which were thrown out in order not to throw off a fuel efficiency prediction as diesel engines are naturally more fuel efficient than gas engines. I would have liked to make diesel another attribute to predict fuel efficiency from, however the small sample size makes this futile. 
+The data as received required some correction and paring down. Some horsepower data was missing and was corrected via google search. The data set contained 7 diesel and 3 rotary engine cars which were thrown out in order not to throw off a fuel efficiency prediction, diesel engines are naturally more fuel efficient than gas engines, while rotary engines are highly inefficient for their small displacement. I would have liked to make diesel another attribute to predict fuel efficiency from, however the small sample size makes this futile.
 
 ## Ridge Regression
 
