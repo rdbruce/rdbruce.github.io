@@ -2,7 +2,7 @@
 
 This is an analysis of internal combustion automobiles of various national origins. We will explore the qualities that make or break fuel efficiency and then we will examine how those qualities form car stereoypes. 
 
-![](assets/IMG/s-|1600.jpg)
+![](assets/IMG/s-l1600.jpg)
 
 ***
 
