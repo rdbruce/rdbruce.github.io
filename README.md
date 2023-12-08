@@ -14,7 +14,7 @@ We did this to solve the problem. We concluded that...
 
 ## Data
 
-Here is an overview of the dataset, how it was obtained and the preprocessing steps taken, with some plots!
+The data used comes from the UCI machine learning repository. It is a space seperated data file containing a list of qualities of 398 cars from the United States, Europe, and Japan. The qualities listed in order: combined fuel efficiency in miles per gallon, number of cylinders, displacement in cubic inches, horse power, weight in pounds, acceleration, model year, place or origin, and model name.    
 
 ![](assets/IMG/datapenguin.png){: width="500" }
 
