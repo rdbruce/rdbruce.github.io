@@ -30,13 +30,13 @@ For ridge regression we use every quantity (discarding model name and origin) pr
 On the right is a distribution of error across models tested sorted least error to most error.
 The element weights are in order with the elements of the training data.]
 
-We can see that our model is concentraiting everything into the weight and model year elements. This makes some sense, increased weight means an increased inertia that must be overcome with a loss of fuel efficiency. On the other hand, as the 70s progressed the oil crisis and clean air regulations drove the efficiency of new cars up year after year. We will further confirm these relationships in the K means section. What doesnt make any sense is the lack of weight in any of the elements associated with the engine. Why dont cylinder count, displacement, or power seem to describe efficiency? Why do non american cars always top the error distribution? Lets now examine only american cars. 
+We can see that our model is concentrating  everything into the weight and model year elements. This makes some sense, increased weight means an increased inertia that must be overcome with a loss of fuel efficiency. On the other hand, as the 70s progressed the oil crisis and clean air regulations drove the efficiency of new cars up year after year. We will further confirm these relationships in the K means section. What does not make any sense is the lack of weight in any of the elements associated with the engine. Why don't cylinder count, displacement, or power seem to describe efficiency? Why do non american cars always top the error distribution? Lets now examine only american cars. 
 
 ![](assets/IMG/Capture2.PNG)
 
 [This is another sample of training data with only american cars.]
 
-After eliminating all foreign cars from the data set the RMSE descends from near 3 to near 2. We can also see that the weight is less concentraited into just the weight and model year. The elements, cylinder number, displacement, and acceleration have become more relevant. The only element still without weight is power. The foreign cars clearly threw off the ridge regression predictions, however it is not clear to me why this is the case. The issue could lie with small foreign sample size, some sort of data issue like use of imperial rather than U.S gallons, or superior fuel efficiency in small foreign engines making the connection between displacement and efficiency less obvious.  
+After eliminating all foreign cars from the data set the RMSE descends from near 3 to near 2. We can also see that the weight is less concentrated into just the weight and model year. The elements, cylinder number, displacement, and acceleration have become more relevant. The only element still without weight is power. The foreign cars clearly threw off the ridge regression predictions, however it is not clear to me why this is the case. The issue could lie with small foreign sample size, some sort of data issue like use of imperial rather than U.S gallons, or superior fuel efficiency in small foreign engines making the connection between displacement and efficiency less obvious.  
 
 ## K Means Clustering
 
@@ -52,7 +52,7 @@ Group zero is made up of big fast gas guzzlers, while group one are fuel efficie
 
 [Six scatter plots with a car element input and efficiency output. Cluster zero points are orange. Cluster one points are blue.]
 
-These graphs suggest the best way to categorize the clusters is through cylinder count, displacement, and power. These categories give the clusters the least overlap. Acceleration is the most muddy element with pleanty of cluster overlap, this suggests the big gas guzzlers dont actually go much faster than smaller cars.
+These graphs suggest the best way to categorize the clusters is through cylinder count, displacement, and power. These categories give the clusters the least overlap. Acceleration is the most muddy element with plenty of cluster overlap, this suggests the big gas guzzlers don't actually go much faster than smaller cars.
 
 We can clearly see the negative correlations with efficiency in the first 4 graphs. We can also see a clear positive correlation between year and efficiency. This again poses the question of conspicuous weight placed upon weight and year, when so many other elements resemble weight.  
 
@@ -70,7 +70,7 @@ We can see that group zero is entirely endemic to the United States, while group
 
 [Six new scatter plots without foreign data.]
 
-In an attempt to get to the bottom of the weight discrepancy I plotted the cluster plots without foreign cars. The main difference between these plots and the world wide plots is the reduction in efficiency outliers. I think that these outliers were made more conspicuous by the scaling this would explain the higher error of the world wide regression. These outliers must also have the effect of the concentraited weights.  
+In an attempt to get to the bottom of the weight discrepancy I plotted the cluster plots without foreign cars. The main difference between these plots and the world wide plots is the reduction in efficiency outliers. I think that these outliers were made more conspicuous by the scaling this would explain the higher error of the world wide regression. These outliers must also have the effect of the concentrated weights.  
 
 ## Conclusion
 
