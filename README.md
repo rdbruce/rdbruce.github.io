@@ -1,6 +1,7 @@
 ## The Cars of the World (Wait maybe not!) 1970 - 1982
 
-This is an analysis of internal combustion automobiles of various national origins. We will explore the qualities that make or break fuel efficiency and then we will examine how those qualities form car stereoypes. 
+This is an analysis of internal combustion automobiles of various national origins. We will explore the qualities that make or break fuel efficiency and then we will examine how those qualities form car stereoypes.
+https://colab.research.google.com/drive/10neqrZvFUFTaXzirdP12qAnYQ37exb-y?usp=sharing
 
 ![](assets/IMG/s-l1600.jpg)
 
